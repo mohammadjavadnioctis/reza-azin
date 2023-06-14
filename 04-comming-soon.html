@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reza Azin</title>
+    <meta name="description" content="بلاگری صحیح" />
+	<link rel="icon" type="image/x-icon" href="/images/logo.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <!-- Font -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500"
+      rel="stylesheet"
+    />
+
+    <link href="common-css/ionicons.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+
+    <link href="04-comming-soon/css/styles.css" rel="stylesheet" />
+
+    <link href="04-comming-soon/css/responsive.css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <div class="main-area">
+      <section class="right-section full-height">
+        <a class="logo" href="#"><img src="images/logo.svg" alt="Logo" /></a>
+
+        <div class="display-table">
+          <div class="display-table-cell">
+            <div class="main-content">
+              <h1 class="title"><b>در دست ساخت</b></h1>
+              <!-- <p class="desc">Our website is currently undergoing scheduled maintenance.
+							We Should be back shortly. Thank you for your patience.</p> -->
+
+              <div class="email-input-area">
+                <form id="emailForm" class="subscribtion-form">
+                  <button class="submit-btn" name="submit" type="submit">
+                    <b>خبردارم کن</b>
+                  </button>
+                  <input
+				  	id="emailInput"
+                    class="email-input"
+                    name="email"
+                    type="text"
+                    placeholder="ایمیلت رو وارد کن"
+                    required
+                  />
+                </form>
+              </div>
+              <!-- email-input-area -->
+
+              <p class="post-desc">
+                ایمیلت رو وارد کن تا شامل تخفیف ویژه لانج بشی!
+              </p>
+            </div>
+            <!-- main-content -->
+          </div>
+          <!-- display-table-cell -->
+        </div>
+        <!-- display-table -->
+
+        <ul class="footer-icons">
+          <!-- <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+				<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+				<li><a href="#"><i class="ion-social-googleplus"></i></a></li> -->
+          <li>
+            <a href="https://www.instagram.com/reza.purazin/" target="_blank"
+              ><i class="ion-social-instagram-outline"></i
+            ></a>
+          </li>
+          <!-- <li><a href="#"><i class="ion-social-pinterest"></i></a></li> -->
+          <li>آخرین خبر ها رو از اینحا دنبال کن</li>
+        </ul>
+      </section>
+      <!-- right-section -->
+      <section
+        class="left-section"
+        style="
+          background-image: url(images/reza-azin-no-background.png);
+          background-position: center;
+        "
+      ></section>
+      <!-- left-section -->
+    </div>
+    <!-- main-area -->
+
+    <!-- SCIPTS -->
+
+    <script src="common-js/jquery-3.1.1.min.js"></script>
+
+    <script src="common-js/jquery.countdown.min.js"></script>
+
+    <script src="common-js/scripts.js"></script>
+    <!-- <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyC-yqHRTyMv3ez9AmW92qIP6TQDUwIb7-E",
+        authDomain: "reza-azin.firebaseapp.com",
+        projectId: "reza-azin",
+        storageBucket: "reza-azin.appspot.com",
+        messagingSenderId: "64533319582",
+        appId: "1:64533319582:web:2a6f07c9cc27d61c77d08f",
+        measurementId: "G-T1MV9SVYEF",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      // Initialize Firestore
+      var db = firebase.firestore();
+
+      document
+        .getElementById("emailForm")
+        .addEventListener("submit", function (event) {
+          // Prevent the default form submit action
+          event.preventDefault();
+
+          // Get the email address from the input field
+          var email = document.getElementById("emailInput").value;
+
+          // Add a new document in collection "emails"
+          db.collection("emails")
+            .add({
+              email: email,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(), // you can use a timestamp to know when the email was added
+            })
+            .then((docRef) => {
+              console.log("Document written with ID: ", docRef.id);
+              // Clear the input field
+              document.getElementById("emailInput").value = "";
+            })
+            .catch((error) => {
+              console.error("Error adding document: ", error);
+            });
+        });
+    </script> -->
+	<script type="module">
+		// Import the necessary Firebase modules
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+		import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+		
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+		  apiKey: "AIzaSyC-yqHRTyMv3ez9AmW92qIP6TQDUwIb7-E",
+		  authDomain: "reza-azin.firebaseapp.com",
+		  projectId: "reza-azin",
+		  storageBucket: "reza-azin.appspot.com",
+		  messagingSenderId: "64533319582",
+		  appId: "1:64533319582:web:2a6f07c9cc27d61c77d08f",
+		  measurementId: "G-T1MV9SVYEF",
+		};
+	  
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+	  
+		// Initialize Firestore
+		const db = getFirestore(app);
+	  
+		document.getElementById("emailForm").addEventListener("submit", function(event) {
+		  // Prevent the default form submit action
+		  event.preventDefault();
+	  
+		  // Get the email address from the input field
+		  var email = document.getElementById("emailInput").value;
+	  
+		  // Add a new document in collection "emails"
+		  addDoc(collection(db, "emails"), {
+			email: email,
+			timestamp: serverTimestamp(), // you can use a timestamp to know when the email was added
+		  })
+		  .then((docRef) => {
+			// console.log("Document written with ID: ", docRef.id);
+			alert('ایمیل با موفقیت ثبت شد!')
+			// Clear the input field
+			document.getElementById("emailInput").value = "";
+		  })
+		  .catch((error) => {
+			console.error("Error adding document: ", error);
+		  });
+		});
+	  </script>
+	  
+  </body>
+</html>
