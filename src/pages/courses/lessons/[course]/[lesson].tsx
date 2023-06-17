@@ -78,14 +78,17 @@ type Param = {
 
 export const getStaticPaths: GetStaticPaths = () => {
     const courses = getallCourses(["slug", "curriculum"]);
+    // console.log('this is the courses: ', courses)
     const params = courses.map((course) => {
         const curriculum = getLessonSlugByChapter(course.curriculum);
         return curriculum.map((lesson) => {
             return { course: course.slug, lesson: lesson.slug };
         });
     });
+    // console.log('this is the params: ', params)
 
     const pages = flatDeep<Param>(params);
+    // console.log('this i the pages: ', pages.slice(0,5))
     return {
         paths: pages.map(({ course, lesson }) => {
             return {
@@ -104,16 +107,21 @@ type Params = {
 };
 
 export function getStaticProps({ params }: Params) {
+     
     const course = getCourseBySlug(params.course, [
         "title",
         "slug",
         "curriculum",
+        "id"
     ]);
+    // console.log('get course by slug: ', course)
     const curriculum = getCurriculum(
         course.curriculum,
+        course.id,
         ["id", "title", "type", "access", "duration", "video"],
         params.course
     );
+    // console.log('getCurriculum: ', curriculum)
     const lesson = getLessonBySlug(
         params.lesson,
         ["title", "video", "content", "access"],

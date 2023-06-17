@@ -98,6 +98,7 @@ type Params = {
 
 export const getStaticProps = ({ params }: Params) => {
     const course = getCourseBySlug(params.slug, "all");
+    // console.log('this one is the course with the params.slul all', course)
     const instructor = getInstructorByID(course.instructor, "all");
     const relatedCourses = getFilteredCourses(
         [
@@ -116,6 +117,7 @@ export const getStaticProps = ({ params }: Params) => {
 
     const curriculum = getCurriculum(
         course.curriculum,
+        course.id,
         ["id", "title", "type", "access", "video", "duration"],
         course.slug
     );
