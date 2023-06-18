@@ -75,7 +75,7 @@ const Header = ({ shadow, fluid, transparent = true, mode }: TProps) => {
                         )}
                     >
                          <div className="tw-flex tw-justify-start tw-items-center">
-                            <button className="tw-bg-white tw-rounded-[32px] tw-px-10 tw-py-3 tw-text-secondary tw-font-semibold">نقشه راه</button>
+                            <button type="button" className="tw-bg-white tw-rounded-[32px] tw-px-10 tw-py-3 tw-text-secondary tw-font-semibold">نقشه راه</button>
                             <Anchor
                                 path="/#!"
                                 className={clsx(
