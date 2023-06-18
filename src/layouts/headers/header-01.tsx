@@ -115,11 +115,11 @@ const Header = ({ shadow, fluid, transparent = true, mode }: TProps) => {
                                 <ShoppingBasket />
                             </Anchor>
                            
-                            {/* <div className="tw-hidden md:tw-block md:tw-max-w-[250px] md:tw-pl-2.5">
+                            <div className="tw-hidden md:tw-max-w-[250px] md:tw-pl-2.5">
                                 <SearchForm
                                     bg={transparent ? "white" : "light"}
                                 />
-                            </div> */}
+                            </div>
                             <div className="md:tw-hidden tw-overflow-hidden">
                                 <button
                                     type="button"
