@@ -8,20 +8,20 @@ const SEO = () => {
             titleTemplate={`%s - ${siteConfig.titleTemplate}`}
             defaultTitle={siteConfig.name}
             description={siteConfig.description}
-            canonical="https://maxcoach-react.pages.dev/"
+            canonical="https://dev.rezaazin.com/"
             openGraph={{
                 type: "website",
-                locale: "en_IE",
+                locale: "fa_IR",
                 site_name: siteConfig.name,
                 images: [
                     {
-                        url: "https://maxcoach-react.pages.dev/images/about/about-me/about-me-popup-video-poster.jpg",
+                        url: "https://firebasestorage.googleapis.com/v0/b/reza-azin.appspot.com/o/reza-azin-hero-section.png?alt=media&token=c9b97489-d0a7-4ee0-9719-7c6c9310ffed",
                         width: 800,
                         height: 600,
                         alt: "Og Image Alt",
                     },
                     {
-                        url: "https://maxcoach-react.pages.dev/images/about/about-me/about-me-popup-video-poster.jpg",
+                        url: "https://firebasestorage.googleapis.com/v0/b/reza-azin.appspot.com/o/reza-azin-hero-section.png?alt=media&token=c9b97489-d0a7-4ee0-9719-7c6c9310ffed",
                         width: 900,
                         height: 800,
                         alt: "Og Image Alt Second",
@@ -53,6 +53,7 @@ const SEO = () => {
             ]}
             additionalLinkTags={[
                 {
+                    // TODO: replace the icons here
                     rel: "apple-touch-icon",
                     href: "/icons/icon-192x192.png",
                 },
