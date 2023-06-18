@@ -11,7 +11,7 @@ import {
 import { flatDeep } from "@utils/methods";
 import { getSlugs } from "./util";
 
-const file = path.join(process.cwd(), "src/data/curriculum/chapters/chapters.json");
+// const file = path.join(process.cwd(), "src/data/curriculum/chapters/chapters.json");
 const lessonDirectory = path.join(process.cwd(), "src/data/curriculum/lessons");
 
 export function getLessonBySlug(
@@ -62,7 +62,7 @@ export function getAllLessons(
     return lessons;
 }
 
-function getChapter(chaptersTitleIds: IDType[], chaptersFileId: string = '01'): IChapter[] {
+function getChapter(chaptersTitleIds: IDType[], chaptersFileId = '01'): IChapter[] {
     const innerfile = path.join(process.cwd(), `src/data/curriculum/chapters/chapters-for-lesson-with-id-${chaptersFileId}.json`);
     // console.log('received Ids: areeeeeeeeeeeeee: ', chaptersTitleIds)
     const rawData = JSON.parse(fs.readFileSync( innerfile, "utf8")) as IChapter[];
