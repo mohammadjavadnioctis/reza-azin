@@ -9,12 +9,13 @@ module.exports = {
                 transparent: "transparent",
                 current: "currentColor",
                 primary: {
-                    DEFAULT: "#20AD96",
-                    light: "#8fd6ca",
+                    DEFAULT: "#FAF748",
+                    light: "#D9C618",
                 },
                 secondary: {
-                    DEFAULT: "#3F3A64",
-                    light: "#8C89A2",
+                   
+                    DEFAULT: "#3F1859",
+                    light: "#A76BCF",
                 },
                 body: "#696969",
                 heading: "#333333",
@@ -118,10 +119,11 @@ module.exports = {
                 },
             }),
             fontFamily: {
-                body: ["Poppins", "sans-serif"],
-                heading: ["Poppins", "sans-serif"],
-                playfair: ["Playfair Display", "serif"],
-                rossela: ["Conv_Rossela-Demo-2", "serif"],
+                primary: "Yekan Bakh FaNum",
+                body: ["Yekan Bakh FaNum, Poppins", "sans-serif"],
+                heading: ["Yekan Bakh FaNum, Poppins", "sans-serif"],
+                playfair: ["Yekan Bakh FaNum, Playfair Display", "serif"],
+                rossela: ["Yekan Bakh FaNum, Conv_Rossela-Demo-2", "serif"],
             },
             fontSize: {
                 sm: "0.75rem",
