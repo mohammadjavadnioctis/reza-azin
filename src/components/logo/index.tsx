@@ -11,15 +11,16 @@ const Logo = ({ variant, className }: TProps) => {
         <Link href="/" className={clsx("tw-inline-block", className)}>
             {variant === "dark" && (
                 <img
-                    src="/images/logo/dark-logo.png"
+                    src="/images/logo/dark-logo.svg"
                     alt="Logo"
                     width={158}
                     height={26}
                 />
             )}
+            {/* TODO: ADD the dark logo */}
             {variant === "light" && (
                 <img
-                    src="/images/logo/light-logo.png"
+                    src="/images/logo/dark-logo.svg"
                     alt="Logo"
                     width={158}
                     height={26}
