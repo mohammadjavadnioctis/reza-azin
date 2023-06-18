@@ -28,7 +28,7 @@ const NavLink = ({
             path={path}
             id={id}
             className={clsx(
-                "tw-font-medium 2xl:tw-text-[16px] tw-flex tw-items-center tw-leading-snug",
+                "2xl:tw-text-[16px] tw-font-semibold tw-flex tw-items-center tw-leading-snug",
                 color === "light" && "tw-text-white hover:tw-text-white",
                 color === "dark" && "tw-text-secondary",
                 hoverStyle === "B" &&
