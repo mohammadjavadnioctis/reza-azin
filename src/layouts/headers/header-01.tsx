@@ -27,7 +27,7 @@ type TProps = {
     mode?: "light" | "dark";
 };
 
-const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
+const Header = ({ shadow, fluid, transparent = true, mode }: TProps) => {
     const router = useRouter();
     const [visibleSearch, setVisibleSearch] = useState(false);
     const [offcanvas, setOffcanvas] = useState(false);
