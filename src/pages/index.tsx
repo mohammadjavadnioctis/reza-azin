@@ -18,6 +18,7 @@ import { IBlog, ICourse } from "@utils/types";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
+import HeroSection from "@components/HeroSection/HeroSection";
 
 interface PageContent {
     section: string;
@@ -40,34 +41,38 @@ type PageProps = NextPage<TProps> & {
 
 const Home: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-
+    console.log('this is the data : ', data)
     return (
+
         <>
-            <HeroArea
-                data={{
-                    ...content?.["hero-area"],
-                    popularCourse: data.popularCourse,
-                }}
-            />
-            <ServiceArea data={content?.["service-area"]} space="none" />
-            <AboutArea data={content?.["about-area"]} />
-            <Wrapper className="tw-py-[100px]">
-                <FunFactArea
-                    data={content?.["funfact-area"]}
-                    space="bottom-2"
-                />
-                <TestimonialArea
-                    data={content?.["testimonial-area"]}
-                    space="none"
-                />
-            </Wrapper>
-            <VideoArea data={content?.["video-area"]} space="none" />
-            <CourseArea
-                data={{ ...content?.["course-area"], courses: data.courses }}
-            />
-            <BlogArea data={{ ...content?.["blog-area"], blogs: data.blogs }} />
-            <BrandArea data={content?.["brand-area"]} />
+           <HeroSection />
         </>
+        // <>
+        //     <HeroArea
+        //         data={{
+        //             ...content?.["hero-area"],
+        //             popularCourse: data.popularCourse,
+        //         }}
+        //     />
+        //     <ServiceArea data={content?.["service-area"]} space="none" />
+        //     <AboutArea data={content?.["about-area"]} />
+        //     <Wrapper className="tw-py-[100px]">
+        //         <FunFactArea
+        //             data={content?.["funfact-area"]}
+        //             space="bottom-2"
+        //         />
+        //         <TestimonialArea
+        //             data={content?.["testimonial-area"]}
+        //             space="none"
+        //         />
+        //     </Wrapper>
+        //     <VideoArea data={content?.["video-area"]} space="none" />
+        //     <CourseArea
+        //         data={{ ...content?.["course-area"], courses: data.courses }}
+        //     />
+        //     <BlogArea data={{ ...content?.["blog-area"], blogs: data.blogs }} />
+        //     <BrandArea data={content?.["brand-area"]} />
+        // </>
     );
 };
 
