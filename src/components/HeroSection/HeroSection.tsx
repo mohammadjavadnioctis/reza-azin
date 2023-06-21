@@ -2,6 +2,7 @@ import UiImage from "lib/Image";
 import React, { FC } from "react";
 import LineScratchLeft from '@assets/svgs/scratch-line-left.svg'
 import ScratchLineRight from '@assets/svgs/scratch-line-right.svg'
+import GraduationCap from '@assets/svgs/graduation-cap.svg'
 
 const HeroSection: FC = () => {
     return (
@@ -35,7 +36,11 @@ const HeroSection: FC = () => {
                     <h1 className="tw-font-black tw-text-[120px] gradient-text tw-font-dana">
                         رضا آذین
                     </h1>
-                    <h2 className="tw-text-heading tw-text-[30px] tw-font-black">آموزش بلاگری صحیح</h2>
+                    <div className="tw-flex ">
+                        <GraduationCap className="tw-ml-[10px]"/>
+                        <h2 className="tw-text-heading tw-text-[30px] tw-font-black">آموزش بلاگری صحیح</h2>
+                    </div>
+                    <p className="tw-text-xl tw-font-normal tw-text-[#DADADA]">بلاگری تورو به درآمد فوق‌العاده‌ای می‌رسونه!</p>
                 </div>
             </div>
         </div>
