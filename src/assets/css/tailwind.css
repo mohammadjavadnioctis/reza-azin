@@ -107,3 +107,9 @@
         inset: auto !important;
     }
 }
+
+.gradient-text {
+    background: -webkit-linear-gradient(right, #3F1859, #A76BCF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

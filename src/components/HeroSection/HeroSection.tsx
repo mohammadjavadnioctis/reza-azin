@@ -30,8 +30,12 @@ const HeroSection: FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="tw-h-[640px] tw-w-full tw-border tw-border-pink-500 ">
-                right
+            <div className="tw-h-[640px] tw-w-full tw-flex tw-justify-end tw-items-center tw-pr-[223px] tw-border tw-border-pink-500">
+                <div className="tw-border-2 tw-border-blue-500">
+                    <h1 className="tw-font-black tw-text-[120px] gradient-text">
+                        رضا آذین
+                    </h1>
+                </div>
             </div>
         </div>
     );
