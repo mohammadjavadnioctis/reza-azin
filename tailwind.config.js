@@ -120,6 +120,7 @@ module.exports = {
             }),
             fontFamily: {
                 primary: "Yekan Bakh FaNum",
+                dana: 'dana',
                 body: ["Yekan Bakh FaNum, Poppins", "sans-serif"],
                 heading: ["Yekan Bakh FaNum, Poppins", "sans-serif"],
                 playfair: ["Yekan Bakh FaNum, Playfair Display", "serif"],

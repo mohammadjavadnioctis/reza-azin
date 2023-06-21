@@ -11,6 +11,13 @@
 	src: url('/fonts/yekan/fonts/woff/YekanBakhFaNum-Regular.woff') format('woff'),   
 	url('/fonts/yekan/fonts/woff2/YekanBakhFaNum-Regular.woff2') format('woff2');		
 }
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 100;
+	src: url('/fonts/dana/woff/Dana-Regular.woff') format('woff'),   
+	url('/fonts/dana/woff2/Dana-Regular.woff2') format('woff2');		
+}
 
 @layer base {
     body {
