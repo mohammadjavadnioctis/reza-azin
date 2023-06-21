@@ -1,5 +1,7 @@
 import UiImage from "lib/Image";
 import React, { FC } from "react";
+import LineScratchLeft from '@assets/svgs/scratch-line-left.svg'
+import ScratchLineRight from '@assets/svgs/scratch-line-right.svg'
 
 const HeroSection: FC = () => {
     return (
@@ -23,6 +25,8 @@ const HeroSection: FC = () => {
                                 className="tw-bg-primary tw-rounded-t-[175px] tw-translate-x-5 -tw-translate-y-5"
 
                         />
+                        <LineScratchLeft className="tw-absolute tw-top-[52px] tw-left-[-71px]"/>
+                        <ScratchLineRight className="tw-absolute tw-top-[52px] tw-right-2"/>
                     </div>
                 </div>
             </div>
