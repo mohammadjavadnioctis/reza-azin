@@ -44,7 +44,7 @@ const aspectHClasses: Record<number, string> = {
   16: "aspect-h-16",
 };
 
-const UiImage: FC<UiImageProps> = forwardRef((props, ref) => {
+const UiImage: FC<UiImageProps> = forwardRef((props) => {
   const { aspectW, aspectH, ...rest } = props;
 
   if (typeof aspectW === "number" && typeof aspectH === "number") {
