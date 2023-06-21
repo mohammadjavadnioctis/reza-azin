@@ -18,7 +18,7 @@ module.exports = {
                     light: "#A76BCF",
                 },
                 body: "#696969",
-                heading: "#333333",
+                heading: {DEFAULT: "#4F4F4F"},
                 success: {
                     DEFAULT: "#4CAF50",
                     100: "#7ed321",
