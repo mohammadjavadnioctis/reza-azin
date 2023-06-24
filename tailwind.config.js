@@ -77,6 +77,7 @@ module.exports = {
                     850: "#666666",
                 },
                 blue: {
+                    DEFAULT: "#007AFF",
                     100: "#7288e8",
                 },
                 spring: "#F5F1ED",
@@ -105,6 +106,8 @@ module.exports = {
                 mandy: "#df5b6c",
                 tan: "#d2a98e",
                 mishcka: "#e2e2e8",
+                'violet-dark': "#3F1859",
+                'violet-light': "#A76BCF"
             },
             typography: ({ theme }) => ({
                 DEFAULT: {

@@ -3,11 +3,12 @@ import React, { FC } from "react";
 import LineScratchLeft from "@assets/svgs/scratch-line-left.svg";
 import ScratchLineRight from "@assets/svgs/scratch-line-right.svg";
 import GraduationCap from "@assets/svgs/graduation-cap.svg";
+import { UiLink } from "lib/UiLink";
 
 const HeroSection: FC = () => {
     return (
         <div className="Hero_section tw-flex tw-flex-row">
-            <div className="tw-h-[640px] tw-w-full tw-max-w-[640px] tw-relative tw-rounded-br-[25px] tw-bg-secondary tw-border tw-border-pink-500 ">
+            <div className="tw-h-[640px] tw-w-full tw-max-w-[40%] tw-relative tw-rounded-br-[25px] tw-bg-secondary tw-border tw-border-pink-500 ">
                 <div className="image_container tw-absolute tw-right-0 tw-bottom-12 tw-translate-x-[31%]">
                     <div className=" tw-relative tw-w-[323px] tw-h-[431px] ">
                         <UiImage
@@ -50,6 +51,14 @@ const HeroSection: FC = () => {
                     <p className="tw-text-xl tw-font-normal tw-text-[#DADADA] tw-mt-6">
                         بلاگری تورو به درآمد فوق‌العاده‌ای می‌رسونه!
                     </p>
+                    <div>
+                       <UiLink href='/#'>
+                            <button className="tw-bg-blue tw-text-white tw-px-10 tw-py-3 tw-rounded-[39px] tw-font-bold tw-shadow-[0px_0px_10p_-4px_#007AFF] tw-cursor-pointer"> نقشه راه </button>
+                        </UiLink >
+                       <UiLink href='/#'>
+                            <button className="tw-px-10 tw-py-3 tw-rounded-[39px] tw-font-bold tw-shadow-[0px_0px_10p_-4px_#007AFF] tw-text-violet-dark tw-cursor-pointer"> نقشه راه </button>
+                        </UiLink >
+                    </div>
                 </div>
             </div>
         </div>
