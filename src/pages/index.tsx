@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import Layout from "@layout/layout-01";
-import Wrapper from "@ui/wrapper/wrapper-01";
-import HeroArea from "@containers/hero/layout-01";
-import ServiceArea from "@containers/service/layout-01";
-import AboutArea from "@containers/about/layout-01";
-import FunFactArea from "@containers/funfact/layout-01";
-import TestimonialArea from "@containers/testimonial/layout-01";
-import VideoArea from "@containers/video/layout-01";
-import CourseArea from "@containers/course/layout-01";
-import BlogArea from "@containers/blog/layout-01";
-import BrandArea from "@containers/brand/layout-01";
+// import Wrapper from "@ui/wrapper/wrapper-01";
+// import HeroArea from "@containers/hero/layout-01";
+// import ServiceArea from "@containers/service/layout-01";
+// import AboutArea from "@containers/about/layout-01";
+// import FunFactArea from "@containers/funfact/layout-01";
+// import TestimonialArea from "@containers/testimonial/layout-01";
+// import VideoArea from "@containers/video/layout-01";
+// import CourseArea from "@containers/course/layout-01";
+// import BlogArea from "@containers/blog/layout-01";
+// import BrandArea from "@containers/brand/layout-01";
 
 import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
