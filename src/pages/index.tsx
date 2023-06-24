@@ -12,7 +12,7 @@ import Layout from "@layout/layout-01";
 // import BlogArea from "@containers/blog/layout-01";
 // import BrandArea from "@containers/brand/layout-01";
 
-import { normalizedData } from "@utils/methods";
+// import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
 
 import HeroSection from "@components/HeroSection/HeroSection";
@@ -40,9 +40,11 @@ type PageProps = NextPage<TProps> & {
     Layout: typeof Layout;
 };
 
-const Home: PageProps = ({ data }) => {
-    const content = normalizedData<PageContent>(data.page?.content, "section");
-    console.log("this is the data : ", data);
+const Home: PageProps = (
+    // { data }
+    ) => {
+    // const content = normalizedData<PageContent>(data.page?.content, "section");
+    // console.log("this is the data : ", data);
     return (
         <>
             <HeroSection />
