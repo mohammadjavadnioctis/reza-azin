@@ -107,12 +107,11 @@ type Params = {
 };
 
 export function getStaticProps({ params }: Params) {
-     
     const course = getCourseBySlug(params.course, [
         "title",
         "slug",
         "curriculum",
-        "id"
+        "id",
     ]);
     // console.log('get course by slug: ', course)
     const curriculum = getCurriculum(

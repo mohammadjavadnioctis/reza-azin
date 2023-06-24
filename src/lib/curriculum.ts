@@ -62,12 +62,20 @@ export function getAllLessons(
     return lessons;
 }
 
-function getChapter(chaptersTitleIds: IDType[], chaptersFileId = '01'): IChapter[] {
-    const innerfile = path.join(process.cwd(), `src/data/curriculum/chapters/chapters-for-lesson-with-id-${chaptersFileId}.json`);
+function getChapter(
+    chaptersTitleIds: IDType[],
+    chaptersFileId = "01"
+): IChapter[] {
+    const innerfile = path.join(
+        process.cwd(),
+        `src/data/curriculum/chapters/chapters-for-lesson-with-id-${chaptersFileId}.json`
+    );
     // console.log('received Ids: areeeeeeeeeeeeee: ', chaptersTitleIds)
-    const rawData = JSON.parse(fs.readFileSync( innerfile, "utf8")) as IChapter[];
+    const rawData = JSON.parse(
+        fs.readFileSync(innerfile, "utf8")
+    ) as IChapter[];
     return rawData.filter((chapter: { id: IDType }) =>
-    chaptersTitleIds.includes(chapter.id)
+        chaptersTitleIds.includes(chapter.id)
     );
 }
 

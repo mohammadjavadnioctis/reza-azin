@@ -238,7 +238,6 @@ export default [
         //         path: "/blogs/blog-list",
         //     },
         // ],
-
     },
     {
         id: 6,

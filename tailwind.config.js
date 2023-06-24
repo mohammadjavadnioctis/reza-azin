@@ -13,12 +13,11 @@ module.exports = {
                     light: "#D9C618",
                 },
                 secondary: {
-                   
                     DEFAULT: "#3F1859",
                     light: "#A76BCF",
                 },
                 body: "#696969",
-                heading: {DEFAULT: "#4F4F4F"},
+                heading: { DEFAULT: "#4F4F4F" },
                 success: {
                     DEFAULT: "#4CAF50",
                     100: "#7ed321",
@@ -106,8 +105,8 @@ module.exports = {
                 mandy: "#df5b6c",
                 tan: "#d2a98e",
                 mishcka: "#e2e2e8",
-                'violet-dark': "#3F1859",
-                'violet-light': "#A76BCF"
+                "violet-dark": "#3F1859",
+                "violet-light": "#A76BCF",
             },
             typography: ({ theme }) => ({
                 DEFAULT: {
@@ -123,7 +122,7 @@ module.exports = {
             }),
             fontFamily: {
                 primary: "Yekan Bakh FaNum",
-                dana: 'dana',
+                dana: "dana",
                 body: ["Yekan Bakh FaNum, Poppins", "sans-serif"],
                 heading: ["Yekan Bakh FaNum, Poppins", "sans-serif"],
                 playfair: ["Yekan Bakh FaNum, Playfair Display", "serif"],

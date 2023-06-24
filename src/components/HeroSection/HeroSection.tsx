@@ -12,17 +12,13 @@ const HeroSection: FC = () => {
                 <div className="image_container tw-absolute tw-right-0 tw-bottom-12 tw-translate-x-[31%]">
                     <div className=" tw-relative tw-w-[323px] tw-h-[431px] ">
                         <UiImage
-                            src={
-                                "https://firebasestorage.googleapis.com/v0/b/reza-azin.appspot.com/o/dotted-image-frame.png?alt=media&token=ae875d80-69db-4a2d-a912-aade0c1445e9"
-                            }
+                            src="https://firebasestorage.googleapis.com/v0/b/reza-azin.appspot.com/o/dotted-image-frame.png?alt=media&token=ae875d80-69db-4a2d-a912-aade0c1445e9"
                             alt="reza azin image"
                             fill
                             priority
                         />
                         <UiImage
-                            src={
-                                "https://firebasestorage.googleapis.com/v0/b/reza-azin.appspot.com/o/reza-azin-hero-section.png?alt=media&token=c9b97489-d0a7-4ee0-9719-7c6c9310ffed"
-                            }
+                            src="https://firebasestorage.googleapis.com/v0/b/reza-azin.appspot.com/o/reza-azin-hero-section.png?alt=media&token=c9b97489-d0a7-4ee0-9719-7c6c9310ffed"
                             alt="reza azin image"
                             fill
                             priority
@@ -34,10 +30,7 @@ const HeroSection: FC = () => {
                 </div>
             </div>
             <div className="tw-h-[640px] tw-w-full tw-flex tw-justify-end tw-items-center tw-pr-[223px] ">
-                <div
-                    className=""
-                    style={{ direction: "rtl" }}
-                >
+                <div className="" style={{ direction: "rtl" }}>
                     <h1 className="tw-font-black tw-text-[120px] gradient-text tw-font-dana">
                         رضا آذین
                     </h1>
@@ -45,19 +38,31 @@ const HeroSection: FC = () => {
                         <GraduationCap className="tw-ml-[10px]" />
                         <h2 className="tw-text-heading tw-text-[30px] tw-font-black tw-relative">
                             آموزش بلاگری صحیح
-                            <div className="tw-absolute -tw-bottom-1 tw-right-0 tw-w-[105%] tw-h-4 tw-bg-primary tw-z-[-1]"></div>
+                            <div className="tw-absolute -tw-bottom-1 tw-right-0 tw-w-[105%] tw-h-4 tw-bg-primary tw-z-[-1]" />
                         </h2>
                     </div>
                     <p className="tw-text-xl tw-font-normal tw-text-[#DADADA] tw-mt-6">
                         بلاگری تورو به درآمد فوق‌العاده‌ای می‌رسونه!
                     </p>
                     <div>
-                       <UiLink href='/#'>
-                            <button className="tw-bg-blue tw-text-white tw-px-10 tw-py-3 tw-rounded-[39px] tw-font-bold tw-shadow-[0px_0px_10p_-4px_#007AFF] tw-cursor-pointer"> نقشه راه </button>
-                        </UiLink >
-                       <UiLink href='/#'>
-                            <button className="tw-px-10 tw-py-3 tw-rounded-[39px] tw-font-bold tw-shadow-[0px_0px_10p_-4px_#007AFF] tw-text-violet-dark tw-cursor-pointer"> نقشه راه </button>
-                        </UiLink >
+                        <UiLink href="/#">
+                            <button
+                                className="tw-bg-blue tw-text-white tw-px-10 tw-py-3 tw-rounded-[39px] tw-font-bold tw-shadow-[0px_0px_10p_-4px_#007AFF] tw-cursor-pointer"
+                                type="button"
+                            >
+                                {" "}
+                                نقشه راه{" "}
+                            </button>
+                        </UiLink>
+                        <UiLink href="/#">
+                            <button
+                                className="tw-px-10 tw-py-3 tw-rounded-[39px] tw-font-bold tw-shadow-[0px_0px_10p_-4px_#007AFF] tw-text-violet-dark tw-cursor-pointer"
+                                type="button"
+                            >
+                                {" "}
+                                نقشه راه{" "}
+                            </button>
+                        </UiLink>
                     </div>
                 </div>
             </div>

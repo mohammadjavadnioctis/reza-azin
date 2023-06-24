@@ -150,7 +150,7 @@ export interface ICurriculum extends Omit<IChapter, "lessons"> {
 
 export interface ICourse {
     cc: string[];
-    id: string,
+    id: string;
     title: string;
     slug: string;
     path: string;

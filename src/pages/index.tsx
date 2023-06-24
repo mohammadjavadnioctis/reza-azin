@@ -15,11 +15,11 @@ import BrandArea from "@containers/brand/layout-01";
 import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
 
+import HeroSection from "@components/HeroSection/HeroSection";
+import Statistics from "@components/Statistics/Statistics";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
-import HeroSection from "@components/HeroSection/HeroSection";
-import Statistics from "@components/Statistics/Statistics";
 
 interface PageContent {
     section: string;
@@ -42,12 +42,11 @@ type PageProps = NextPage<TProps> & {
 
 const Home: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-    console.log('this is the data : ', data)
+    console.log("this is the data : ", data);
     return (
-
         <>
-           <HeroSection />
-           <Statistics />
+            <HeroSection />
+            <Statistics />
         </>
         // <>
         //     <HeroArea

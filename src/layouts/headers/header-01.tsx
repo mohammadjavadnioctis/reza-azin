@@ -9,10 +9,9 @@ import BurgerButton from "@ui/burger-button";
 import Anchor from "@ui/anchor";
 import menu from "@data/menu";
 import { useSticky } from "@hooks";
-import ShoppingBasket from '@assets/svgs/shopping-basket.svg'
-import WhatsAppIcon from '@assets/svgs/whatsapp-icon.svg'
-import ProfileIcon from '@assets/svgs/profile-icon.svg'
-
+import ShoppingBasket from "@assets/svgs/shopping-basket.svg";
+import WhatsAppIcon from "@assets/svgs/whatsapp-icon.svg";
+import ProfileIcon from "@assets/svgs/profile-icon.svg";
 
 const MobileMenu = dynamic(() => import("../../components/menu/mobile-menu"), {
     ssr: false,
@@ -74,8 +73,13 @@ const Header = ({ shadow, fluid, transparent = true, mode }: TProps) => {
                             fluid && "tw-max-w-full tw-px-8 3xl:tw-px-37"
                         )}
                     >
-                         <div className="tw-flex tw-justify-start tw-items-center">
-                            <button type="button" className="tw-bg-white tw-rounded-[32px] tw-px-10 tw-py-3 tw-text-secondary tw-font-semibold">نقشه راه</button>
+                        <div className="tw-flex tw-justify-start tw-items-center">
+                            <button
+                                type="button"
+                                className="tw-bg-white tw-rounded-[32px] tw-px-10 tw-py-3 tw-text-secondary tw-font-semibold"
+                            >
+                                نقشه راه
+                            </button>
                             <Anchor
                                 path="/#!"
                                 className={clsx(
@@ -86,7 +90,7 @@ const Header = ({ shadow, fluid, transparent = true, mode }: TProps) => {
                                 )}
                                 aria-label="User Profile"
                             >
-                               <ProfileIcon />
+                                <ProfileIcon />
                             </Anchor>
                             <Anchor
                                 path="/#!"
@@ -114,7 +118,7 @@ const Header = ({ shadow, fluid, transparent = true, mode }: TProps) => {
                                 {/* <img src={ShoppingBasket} alt="" srcset="" /> */}
                                 <ShoppingBasket />
                             </Anchor>
-                           
+
                             <div className="tw-hidden md:tw-max-w-[250px] md:tw-pl-2.5">
                                 <SearchForm
                                     bg={transparent ? "white" : "light"}
@@ -150,17 +154,15 @@ const Header = ({ shadow, fluid, transparent = true, mode }: TProps) => {
                         <div className="tw-flex tw-justify-end tw-items-center ">
                             <MainMenu
                                 className="tw-hidden xl:tw-block tw-pr-[70px]"
-                                
                                 menu={menu}
                                 color={mode}
                             />
-                        
+
                             <Logo
                                 variant={mode}
                                 className="tw-max-w-[120px] sm:tw-max-w-[158px]"
                             />
-                        
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div className="tw-h-20" />
