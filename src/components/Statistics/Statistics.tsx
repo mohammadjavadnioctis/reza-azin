@@ -16,7 +16,7 @@ const Statistics: FC = () => {
                     <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-4' key={id}>
                         <Icon />
                         <h4>{label}</h4>
-                        <span>+{value}</span>
+                        <span className='tw-font-semibold tw-tracking-[13.4px]'>+{value}</span>
                     </div>
                 )
             })}
