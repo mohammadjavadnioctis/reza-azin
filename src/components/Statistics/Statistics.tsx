@@ -54,7 +54,7 @@ const Statistics: FC = () => {
                     );
                 })}
             </div>
-            <Polygon className="tw-absolute tw-right-0 tw-top-0 -tw-translate-y-[80%] tw-z-[-1]" />
+            <Polygon className="tw-absolute tw-right-0 tw-top-[-120px] tw-z-[-1] rotate-animation" />
         </div>
     );
 };
