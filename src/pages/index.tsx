@@ -19,6 +19,7 @@ import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
 import HeroSection from "@components/HeroSection/HeroSection";
+import Statistics from "@components/Statistics/Statistics";
 
 interface PageContent {
     section: string;
@@ -46,6 +47,7 @@ const Home: PageProps = ({ data }) => {
 
         <>
            <HeroSection />
+           <Statistics />
         </>
         // <>
         //     <HeroArea
