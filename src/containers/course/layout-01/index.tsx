@@ -15,6 +15,7 @@ type TProps = TSection & {
         motto?: MottoType;
         courses: ICourse[];
     };
+    innerContainerClassNames?: string;
 };
 
 const CourseArea = ({
@@ -22,10 +23,11 @@ const CourseArea = ({
     space,
     bg,
     titleSize,
+    innerContainerClassNames
 }: TProps) => {
     return (
         <Section className="course-area" space={space} bg={bg}>
-            <div className="tw-container">
+            <div className={`tw-container ${innerContainerClassNames}`}>
                 {section_title && (
                     <AnimatedSectionTitle
                         {...section_title}

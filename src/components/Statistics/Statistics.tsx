@@ -35,7 +35,7 @@ const statisticsData = [
 
 const Statistics: FC = () => {
     return (
-        <div className="tw-container relative tw-mt-[70px]">
+        <section className="tw-container relative tw-mt-[70px]">
             <StatisticsBG className="tw-max-w-full" />
             <div className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-flex tw-justify-between tw-items-center tw-px-[210px]">
                 {statisticsData.map((item) => {
@@ -55,7 +55,7 @@ const Statistics: FC = () => {
                 })}
             </div>
             <Polygon className="tw-absolute tw-right-0 tw-top-[-120px] tw-z-[-1] rotate-animation" />
-        </div>
+        </section>
     );
 };
 

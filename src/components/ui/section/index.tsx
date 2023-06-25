@@ -12,7 +12,7 @@ const Section = ({ space, bg, className, style, children }: TProps) => {
             className={clsx(
                 className,
                 space === "top-bottom" &&
-                    "tw-py-15 md:tw-py-20 lg:tw-py-[100px]",
+                    "tw-py-15 md:tw-py-20 lg:tw-py-[70px]",
                 space === "top-bottom-2" &&
                     "tw-py-15 md:tw-py-20 lg:tw-pt-[100px] lg:tw-pb-40",
                 space === "top-bottom-3" &&
