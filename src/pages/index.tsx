@@ -21,6 +21,7 @@ import CoursesSliderWithCategory from "@components/CoursesSliderWithCategory/Cou
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
+import AboutTeam from "@components/AboutTeam/AboutTeam";
 
 interface PageContent {
     section: string;
@@ -51,6 +52,11 @@ const Home: PageProps = ({ data }) => {
             <CoursesSliderWithCategory
                 data={{ ...content?.["course-area"], courses: data.courses }}
             />
+
+
+            <AboutTeam />
+
+
             {/* <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
                 innerContainerClassNames="tw-bg-secondary"
