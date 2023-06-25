@@ -21,7 +21,7 @@ const CoursesSliderWithCategory: FC<CoursesSliderWithCategoryProps> = ({
     // bg,
     // titleSize,
 }) => {
-    console.log("this is the data: ", data);
+    // console.log("this is the data: ", data);
     return (
         <section className="tw-container tw-mt-[70px]">
             <div className="tw-min-h-[500px] tw-bg-secondary tw-rounded-[25px]">

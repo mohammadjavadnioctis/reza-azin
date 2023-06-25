@@ -18,10 +18,10 @@ import { IBlog, ICourse } from "@utils/types";
 import HeroSection from "@components/HeroSection/HeroSection";
 import Statistics from "@components/Statistics/Statistics";
 import CoursesSliderWithCategory from "@components/CoursesSliderWithCategory/CoursesSliderWithCategory";
+import AboutTeam from "@components/AboutTeam/AboutTeam";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
-import AboutTeam from "@components/AboutTeam/AboutTeam";
 
 interface PageContent {
     section: string;
@@ -53,9 +53,7 @@ const Home: PageProps = ({ data }) => {
                 data={{ ...content?.["course-area"], courses: data.courses }}
             />
 
-
             <AboutTeam />
-
 
             {/* <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}

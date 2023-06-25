@@ -107,7 +107,7 @@ module.exports = {
                 mishcka: "#e2e2e8",
                 "violet-dark": "#3F1859",
                 "violet-light": "#A76BCF",
-                "paragraph": '#7A7A7A'
+                paragraph: "#7A7A7A",
             },
             typography: ({ theme }) => ({
                 DEFAULT: {
