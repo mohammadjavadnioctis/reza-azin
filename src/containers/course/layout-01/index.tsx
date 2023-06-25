@@ -23,7 +23,7 @@ const CourseArea = ({
     space,
     bg,
     titleSize,
-    innerContainerClassNames
+    innerContainerClassNames = "",
 }: TProps) => {
     return (
         <Section className="course-area" space={space} bg={bg}>

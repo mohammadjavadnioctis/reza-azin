@@ -8,7 +8,7 @@ import Layout from "@layout/layout-01";
 // import FunFactArea from "@containers/funfact/layout-01";
 // import TestimonialArea from "@containers/testimonial/layout-01";
 // import VideoArea from "@containers/video/layout-01";
-import CourseArea from "@containers/course/layout-01";
+// import CourseArea from "@containers/course/layout-01";
 // import BlogArea from "@containers/blog/layout-01";
 // import BrandArea from "@containers/brand/layout-01";
 
@@ -17,10 +17,10 @@ import { IBlog, ICourse } from "@utils/types";
 
 import HeroSection from "@components/HeroSection/HeroSection";
 import Statistics from "@components/Statistics/Statistics";
+import CoursesSliderWithCategory from "@components/CoursesSliderWithCategory/CoursesSliderWithCategory";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
-import CoursesSliderWithCategory from "@components/CoursesSliderWithCategory/CoursesSliderWithCategory";
 
 interface PageContent {
     section: string;
@@ -41,16 +41,16 @@ type PageProps = NextPage<TProps> & {
     Layout: typeof Layout;
 };
 
-const Home: PageProps = (
-    { data }
-    ) => {
+const Home: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-    
+
     return (
         <>
             <HeroSection />
             <Statistics />
-            <CoursesSliderWithCategory data={{ ...content?.["course-area"], courses: data.courses }}  />
+            <CoursesSliderWithCategory
+                data={{ ...content?.["course-area"], courses: data.courses }}
+            />
             {/* <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
                 innerContainerClassNames="tw-bg-secondary"
@@ -105,7 +105,7 @@ export const getStaticProps: GetStaticProps = () => {
             "currency",
             "excerpt",
             "isPopular",
-            "category"
+            "category",
         ],
         "isPopular",
         true
