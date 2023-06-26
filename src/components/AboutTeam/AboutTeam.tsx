@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import BigPlayButton from "@assets/svgs/big-play-button.svg";
 import UiImage from "lib/Image";
+import { UiLink } from "lib/UiLink";
 
 const AboutTeam: FC = () => {
     return (
@@ -13,11 +14,18 @@ const AboutTeam: FC = () => {
                         alt="reza azin image"
                         width={285}
                         height={281}
-                        className="tw-absolute -tw-bottom-4 -tw-left-8"
+                        className="tw-absolute -tw-bottom-0 -tw-left-8"
                     />
+                    <UiLink
+                        href="#"
+                        className="tw-absolute -tw-right-9 tw-bottom-0  tw-py-3 tw-px-12 tw-text-white tw-bg-secondary tw-rounded-[37px]"
+                    >
+                        {" "}
+                        مشاوره{" "}
+                    </UiLink>
                 </div>
                 <div
-                    className="tw-max-w-[743px] tw-w-full tw-pl-10"
+                    className="tw-max-w-[743px] tw-w-full tw-pl-10 tw-space-y-5"
                     style={{ direction: "rtl" }}
                 >
                     <h3 className="tw-inline tw-text-base tw-text-secondary-light ">
