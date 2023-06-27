@@ -108,7 +108,7 @@ module.exports = {
                 "violet-dark": "#3F1859",
                 "violet-light": "#A76BCF",
                 paragraph: "#7A7A7A",
-                defGreen: '#96CD31'
+                defGreen: "#96CD31",
             },
             typography: ({ theme }) => ({
                 DEFAULT: {

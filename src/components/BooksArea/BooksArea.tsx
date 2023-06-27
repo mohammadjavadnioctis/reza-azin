@@ -53,7 +53,10 @@ const BooksArea = () => {
         <section>
             <div className="tw-container tw-flex tw-justify-center tw-items-stretch ">
                 <div className="tw-max-w-[500px] tw-pt-4">
-                    <SwiperSlider options={options} className="bookingsAreaSlider tw-h-full tw-static">
+                    <SwiperSlider
+                        options={options}
+                        className="bookingsAreaSlider tw-h-full tw-static"
+                    >
                         {items.map((item) => {
                             const { Component } = item;
                             return (

@@ -19,10 +19,10 @@ import HeroSection from "@components/HeroSection/HeroSection";
 import Statistics from "@components/Statistics/Statistics";
 import CoursesSliderWithCategory from "@components/CoursesSliderWithCategory/CoursesSliderWithCategory";
 import AboutTeam from "@components/AboutTeam/AboutTeam";
+import BooksArea from "@components/BooksArea/BooksArea";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
-import BooksArea from "@components/BooksArea/BooksArea";
 
 interface PageContent {
     section: string;
