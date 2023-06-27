@@ -117,3 +117,29 @@
     animation: rotate 10s linear infinite;
   }
   
+
+  /* styling the pagination of the BooksArea start*/
+
+   .bookingsAreaSlider > .swiper-autoheight, .swiper-autoheight .swiper-slide {
+    position: static !important;
+  }
+
+  .bookingsAreaSlider .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: end;
+    padding-right: 68px;
+  }
+
+  .bookingsAreaSlider .swiper-pagination .swiper-pagination-bullet:before {
+    width: 5px;
+    height: 5px;
+    margin: 0 5px 0 0 !important
+  }
+
+  .bookingsAreaSlider .swiper-pagination .swiper-pagination-bullet {
+    margin: 0 5px 0 0 !important;
+  }
+
+  /* styling the pagination of the BooksArea end*/

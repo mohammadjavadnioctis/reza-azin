@@ -51,15 +51,15 @@ const BooksArea = () => {
 
     return (
         <section>
-            <div className="tw-container tw-flex tw-justify-center tw-items-stretch tw-space-x-1">
-                <div className="tw-max-w-[500px] tw-border-2 tw-border-orange-400">
-                    <SwiperSlider options={options} className="tw-h-full">
+            <div className="tw-container tw-flex tw-justify-center tw-items-stretch ">
+                <div className="tw-max-w-[500px] tw-pt-4">
+                    <SwiperSlider options={options} className="bookingsAreaSlider tw-h-full tw-static">
                         {items.map((item) => {
                             const { Component } = item;
                             return (
                                 <SwiperSlide
                                     key={item.id}
-                                    className="books-slides tw-max-w-full tw-h-full"
+                                    className="books-slides tw-max-w-full tw-h-full !tw-static"
                                 >
                                     <Component />
                                 </SwiperSlide>
@@ -67,7 +67,7 @@ const BooksArea = () => {
                         })}
                     </SwiperSlider>
                 </div>
-                <div className="tw-relative">
+                <div className="tw-relative tw-ml-6 tw-mr-1">
                     <UiImage
                         src="https://firebasestorage.googleapis.com/v0/b/reza-azin.appspot.com/o/app-content%2Fthe-book-that-sold-100m.png?alt=media&token=3c7eb29e-342c-4bb0-aee5-587e6a74094a"
                         alt="the book that sold 100 million"
