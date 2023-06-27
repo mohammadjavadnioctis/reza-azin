@@ -5,6 +5,7 @@ import ElearningIcon from "@assets/svgs/e-learning.svg";
 import UiImage from "lib/Image";
 import SwiperSlider, { SwiperSlide } from "@components/ui/swiper";
 import { FirstSlide, SecondSlide, ThirdSlide } from "./slides/BooksAreaSlides";
+import { UiLink } from "lib/UiLink";
 
 const items = [
     {
@@ -89,6 +90,9 @@ const BooksArea = () => {
                             رضا آذین، مسیر توسعه فردی و کاری خود را به درستی طی
                             کنید و به نتایج دلخواه دست پیدا کنید.
                         </p>
+                        <UiLink href={'#'} className=" tw-absolute -tw-bottom-[10px] tw-left-[34px] tw-rounded-[32px] tw-bg-violet-dark tw-text-white tw-px-[44px] tw-py-3">
+                            همه کتاب ها 
+                        </UiLink>
                     </div>
                 </div>
             </div>
