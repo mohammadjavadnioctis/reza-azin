@@ -64,7 +64,7 @@ const InPersonCoursesArea: FC<InPersonCoursesAreaPropsType> = ({ courses }) => {
 
                 <SwiperSlider
                     options={options}
-                    className="bookingsAreaSlider tw-h-full tw-static"
+                    className="in-person-courses-area tw-h-full tw-static tw-mt-[-120px]"
                 >
                     {/* TODO:  bind the actuall data to the map */}
                     {domLoaded &&

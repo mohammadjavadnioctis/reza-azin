@@ -132,7 +132,9 @@
     padding-right: 68px;
   }
 
-  .bookingsAreaSlider .swiper-pagination .swiper-pagination-bullet:before {
+  .bookingsAreaSlider .swiper-pagination .swiper-pagination-bullet:before, 
+  .in-person-courses-area .swiper-pagination .swiper-pagination-bullet:before
+  {
     width: 5px;
     height: 5px;
     margin: 0 5px 0 0 !important
