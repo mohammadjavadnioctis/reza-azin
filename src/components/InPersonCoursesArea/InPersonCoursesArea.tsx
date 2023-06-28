@@ -9,24 +9,22 @@ const AnimatedSectionTitle = motion(SectionTitle);
 const InPersonCoursesArea: FC = () => {
     return (
         <section className="tw-my-[70px]">
-          <div className="tw-container">
+            <div className="tw-container">
+                <div className="tw-w-full tw-flex tw-flex-col tw-items-center ">
+                    <AnimatedSectionTitle
+                        title="کلاس‌های آموزشی حضوری"
+                        titleSize="small"
+                        className="tw-mb-7.5 md:tw-mb-4"
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0.4 }}
+                        // variants={''}
+                    />
+                    <LineScratchLeft className="tw-text-violet-light -tw-translate-y-[80px] -tw-rotate-[27deg]" />
+                </div>
 
-              <div className="tw-w-full tw-flex tw-flex-col tw-items-center ">
-                  <AnimatedSectionTitle
-                      title="کلاس‌های آموزشی حضوری"
-                      titleSize="small"
-                      className="tw-mb-7.5 md:tw-mb-4"
-                      initial="offscreen"
-                      whileInView="onscreen"
-                      viewport={{ once: true, amount: 0.4 }}
-                      // variants={''}
-                  />
-                  <LineScratchLeft className="tw-text-violet-light -tw-translate-y-[80px] -tw-rotate-[27deg]" />
-              </div>
-
-              <InPersonCourseCard title="دوره آموزش طراحی استوری" />
-
-          </div>
+                <InPersonCourseCard title="دوره آموزش طراحی استوری" />
+            </div>
         </section>
     );
 };
