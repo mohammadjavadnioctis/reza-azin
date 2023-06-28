@@ -56,7 +56,7 @@ const Home: PageProps = ({ data }) => {
 
             <AboutTeam />
             <BooksArea />
-            <InPersonCoursesArea courses={data.courses}/>
+            <InPersonCoursesArea courses={data.courses} />
 
             {/* <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
@@ -101,7 +101,7 @@ export const getStaticProps: GetStaticProps = () => {
     const courses = getallCourses(
         ["title", "thumbnail", "price", "currency", "category", "description"],
         0,
-        9   
+        9
     );
     const popularCourse = getFilteredCourse(
         [

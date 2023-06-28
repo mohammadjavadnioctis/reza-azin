@@ -23,9 +23,8 @@ const InPersonCourseCard: FC<InPersonCourseCardPropsType> = ({
     startDateString = "شروع از ۱ تیر ماه ۱۴۰۳",
     sessions = 2,
     capacity = 15,
-    startDate = new Date
+    startDate = new Date(),
 }) => {
-    
     return (
         <div className="tw-w-full tw-relative tw-max-w-[636px] tw-rounded-[25px] tw-overflow-hidden">
             <UiImage
@@ -34,7 +33,7 @@ const InPersonCourseCard: FC<InPersonCourseCardPropsType> = ({
                 height={326}
                 alt="course wallpaper"
             />
-        <span className="tw-hidden">{startDate.toDateString()}</span>
+            <span className="tw-hidden">{startDate.toDateString()}</span>
             <div className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-flex tw-flex-col tw-items-center tw-justify-end tw-px-4">
                 <h5 className="tw-text-white tw-text-2xl tw-font-normal">
                     {title}

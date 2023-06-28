@@ -8,19 +8,16 @@ import { ICourse } from "@utils/types";
 
 const AnimatedSectionTitle = motion(SectionTitle);
 
-interface InPersonCoursesArea {
+interface InPersonCoursesAreaPropsType {
     courses: ICourse[];
 }
 
-const InPersonCoursesArea: FC<InPersonCoursesArea> = ({ courses }) => {
+const InPersonCoursesArea: FC<InPersonCoursesAreaPropsType> = ({ courses }) => {
+    const [domLoaded, setDomLoaded] = useState(false);
 
-    
-  const [domLoaded, setDomLoaded] = useState(false);
-
-  useEffect(() => {
-    setDomLoaded(true);
-  }, []);
-
+    useEffect(() => {
+        setDomLoaded(true);
+    }, []);
 
     const options = useMemo(() => {
         return {
@@ -70,18 +67,17 @@ const InPersonCoursesArea: FC<InPersonCoursesArea> = ({ courses }) => {
                     className="bookingsAreaSlider tw-h-full tw-static"
                 >
                     {/* TODO:  bind the actuall data to the map */}
-                    {domLoaded && courses.map((item) => {
-                        return (
-                            <SwiperSlide
-                                key={item.id}
-                                className="books-slides tw-max-w-full tw-h-full !tw-static"
-                            >
-
-                                <InPersonCourseCard title="دوره آموزش طراحی استوری" />
-                                
-                            </SwiperSlide>
-                        );
-                    })}
+                    {domLoaded &&
+                        courses.map((item) => {
+                            return (
+                                <SwiperSlide
+                                    key={item.id}
+                                    className="books-slides tw-max-w-full tw-h-full !tw-static"
+                                >
+                                    <InPersonCourseCard title="دوره آموزش طراحی استوری" />
+                                </SwiperSlide>
+                            );
+                        })}
                 </SwiperSlider>
             </div>
         </section>
