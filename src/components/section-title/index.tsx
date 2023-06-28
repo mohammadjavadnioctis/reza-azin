@@ -8,7 +8,7 @@ type TProps = {
     description?: string;
     align?: "left" | "right" | "center";
     color?: "A" | "B" | "C";
-    titleSize?: "default" | "large";
+    titleSize?: "default" | "large" | "small";
     subtitleClass?: string;
     titleClass?: string;
     descClass?: string;
@@ -58,6 +58,7 @@ const SectionTitle = forwardRef<HTMLDivElement, TProps>(
                         color === "C" && "tw-text-white",
                         titleSize === "large" &&
                             "tw-text-4xl lg:tw-text-5xl tw-leading-heading lg:tw-leading-heading",
+                        titleSize === "small" && "tw-text-xl",
                         titleClass
                     )}
                     dangerouslySetInnerHTML={{ __html: title }}

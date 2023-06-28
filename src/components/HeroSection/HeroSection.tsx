@@ -24,7 +24,7 @@ const HeroSection: FC = () => {
                             priority
                             className="tw-bg-primary tw-rounded-t-[175px] tw-translate-x-5 -tw-translate-y-5"
                         />
-                        <LineScratchLeft className="tw-absolute tw-top-[52px] tw-left-[-71px]" />
+                        <LineScratchLeft className="tw-absolute tw-top-[52px] tw-left-[-71px] tw-text-white" />
                         <ScratchLineRight className="tw-absolute tw-top-[52px] tw-right-2" />
                     </div>
                 </div>

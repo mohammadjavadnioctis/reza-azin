@@ -23,6 +23,7 @@ import BooksArea from "@components/BooksArea/BooksArea";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
+import InPersonCoursesArea from "@components/InPersonCoursesArea/InPersonCoursesArea";
 
 interface PageContent {
     section: string;
@@ -56,6 +57,7 @@ const Home: PageProps = ({ data }) => {
 
             <AboutTeam />
             <BooksArea />
+            <InPersonCoursesArea />
 
             {/* <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
