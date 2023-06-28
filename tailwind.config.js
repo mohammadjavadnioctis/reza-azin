@@ -182,7 +182,7 @@ module.exports = {
             screens: {
                 maxSm: { max: "575px" },
                 // => @media (max-width: 575px) { ... }
-                maxXl: { max: "1199px" },
+                maxXl: { max: "1280px" },
                 // => @media (max-width: 1199px) { ... }
                 maxLg: { max: "991px" },
                 // => @media (max-width: 991px) { ... }
@@ -196,7 +196,7 @@ module.exports = {
                 lg: "992px",
                 // => @media (min-width: 992px) { ... }
 
-                xl: "1200px",
+                xl: "1280px",
                 // => @media (min-width: 1200px) { ... }
 
                 "2xl": "1400px",
@@ -308,7 +308,7 @@ module.exports = {
                         maxWidth: "992px",
                     },
                     "@screen xl": {
-                        maxWidth: "1230px",
+                        maxWidth: "1280px",
                     },
                 },
             });

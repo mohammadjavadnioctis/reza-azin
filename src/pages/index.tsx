@@ -46,7 +46,6 @@ type PageProps = NextPage<TProps> & {
 
 const Home: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
-
     return (
         <>
             <HeroSection />
@@ -57,7 +56,7 @@ const Home: PageProps = ({ data }) => {
 
             <AboutTeam />
             <BooksArea />
-            <InPersonCoursesArea />
+            <InPersonCoursesArea courses={data.courses}/>
 
             {/* <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
@@ -102,7 +101,7 @@ export const getStaticProps: GetStaticProps = () => {
     const courses = getallCourses(
         ["title", "thumbnail", "price", "currency", "category", "description"],
         0,
-        3
+        9   
     );
     const popularCourse = getFilteredCourse(
         [
