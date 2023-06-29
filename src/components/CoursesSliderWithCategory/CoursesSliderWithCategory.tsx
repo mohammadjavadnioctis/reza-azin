@@ -8,6 +8,7 @@ import { scrollUpVariants } from "@utils/variants";
 import SectionTitle from "@components/section-title";
 import { SwiperSlide } from "@components/ui/swiper";
 import dynamic from "next/dynamic";
+import { UiLink } from "lib/UiLink";
 
 const DynamicSwiperSlider = dynamic(() => import("@ui/swiper"), {
     loading: () => <p>Loading...</p>,
@@ -113,6 +114,9 @@ const CoursesSliderWithCategory: FC<CoursesSliderWithCategoryProps> = ({
                     })}
                 </AnimatedSwiper>
                 {/* </div> */}
+                <div className="tw-w-full tw-flex tw-justify-center tw-mt-6">
+                    <UiLink href={'#'} className="tw-mx-auto tw-text-white tw-border-b tw-border-dashed">همه دوره ها</UiLink>
+                </div>
             </div>
         </section>
     );

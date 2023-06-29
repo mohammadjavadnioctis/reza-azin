@@ -115,7 +115,7 @@
     100% {
       transform: rotate(360deg);
     }
-  }gi
+  }
   
   .rotate-animation {
     animation: rotate 10s linear infinite;
