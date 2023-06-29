@@ -39,24 +39,25 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
         },
         ref
     ) => {
+        console.log('this is the thumbnail: ', thumbnail)
         // const priceConv = price === 0 ? "free" : `${currency}${price}`;
         return (
             <div
                 className={clsx(
-                    "tw-transition-all tw-bg-gray-100 tw-rounded tw-h-full group hover:tw-bg-white hover:tw-shadow-4xl hover:tw-shadow-black/[0.12]",
+                    "tw-transition-all tw-bg-gray-100 tw-rounded-[15px] tw-h-full group hover:tw-bg-white hover:tw-shadow-4xl hover:tw-shadow-black/[0.12]",
                     className
                 )}
                 ref={ref}
             >
-                <figure className="tw-relative tw-overflow-hidden">
+                <figure className="tw-relative tw-overflow-hidden tw-rounded-t-[15px]">
                     {thumbnail?.src && (
                         <img
                             src={thumbnail.src}
                             alt={thumbnail?.alt || title}
-                            width={thumbnail?.width || 370}
-                            height={thumbnail?.height || 229}
+                            width={thumbnail?.width || 300}
+                            height={thumbnail?.height || 300}
                             loading={thumbnail?.loading || "lazy"}
-                            className="tw-w-full tw-transition-transform tw-duration-1000 tw-ease-out group-hover:tw-scale-110"
+                            className="tw-min-h-[300px] tw-max-h-[300px] tw-w-full tw-transition-transform tw-duration-1000 tw-ease-out group-hover:tw-scale-110"
                         />
                     )}
 
@@ -65,7 +66,7 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
                     </Anchor>
                 </figure>
                 <div
-                    className="tw-relative tw-px-5 tw-pt-12 tw-pb-4"
+                    className="tw-relative tw-px-5 tw-pt-12 tw-pb-4 tw-rounded-2xl"
                     style={{ direction: "rtl" }}
                 >
                     <h3 className="tw-capitalize tw-font-bold tw-text-violet-dark tw-bg-[#E4E4E4] tw-bg-opacity-90  tw-backdrop-blur-[10px] tw-leading-none tw-rounded-[15px] tw-flex tw-justify-center tw-items-center tw-absolute -tw-right-4 -tw-translate-y-1/2 tw-top-0 tw-w-[calc(100%_+_34px)] tw-h-[60px] md:tw-h-[70px] tw-text-lg md:tw-text-base tw-py-6 tw-px-5">
