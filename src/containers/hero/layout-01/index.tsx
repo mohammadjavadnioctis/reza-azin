@@ -104,6 +104,8 @@ const HeroArea = ({
                                 ...popularCourse.thumbnail,
                                 loading: "eager",
                             }}
+                            duration={popularCourse.duration}
+                            instructorName={popularCourse.instructorName}
                         />
                         <motion.div
                             className="intro1-scene tw-absolute -tw-z-1 -tw-right-11 -tw-bottom-11 tw-w-[136px]"

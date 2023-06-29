@@ -70,6 +70,8 @@ const CourseArea = ({ data: { courses } }: TProps) => {
                             whileInView="onscreen"
                             viewport={{ once: true, amount: 0.1 }}
                             variants={scrollUpVariants}
+                            instructorName={course.instructorName}
+                            duration={course.duration}
                         />
                     ))}
                 </div>

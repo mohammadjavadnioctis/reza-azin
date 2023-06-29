@@ -115,7 +115,12 @@ const CoursesSliderWithCategory: FC<CoursesSliderWithCategoryProps> = ({
                 </AnimatedSwiper>
                 {/* </div> */}
                 <div className="tw-w-full tw-flex tw-justify-center tw-mt-6">
-                    <UiLink href={'#'} className="tw-mx-auto tw-text-white tw-border-b tw-border-dashed">همه دوره ها</UiLink>
+                    <UiLink
+                        href="#"
+                        className="tw-mx-auto tw-text-white tw-border-b tw-border-dashed"
+                    >
+                        همه دوره ها
+                    </UiLink>
                 </div>
             </div>
         </section>
