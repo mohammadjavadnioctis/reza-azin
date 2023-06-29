@@ -6,20 +6,15 @@ import CourseCard from "@components/course-card/course-01";
 import React, { FC, useMemo } from "react";
 import { scrollUpVariants } from "@utils/variants";
 import SectionTitle from "@components/section-title";
-import SwiperSlider, { SwiperSlide } from "@components/ui/swiper";
+import { SwiperSlide } from "@components/ui/swiper";
 import dynamic from "next/dynamic";
 
-
-const DynamicSwiperSlider = dynamic(() => import('@ui/swiper'), {
+const DynamicSwiperSlider = dynamic(() => import("@ui/swiper"), {
     loading: () => <p>Loading...</p>,
-    ssr: false
-  })
-   
-
-
+    ssr: false,
+});
 
 const AnimatedSwiper = motion(DynamicSwiperSlider);
-
 
 const AnimatedSectionTitle = motion(SectionTitle);
 const AnimatedCourseCard = motion(CourseCard);
@@ -68,8 +63,6 @@ const CoursesSliderWithCategory: FC<CoursesSliderWithCategoryProps> = ({
         };
     }, []);
 
-
-
     return (
         <section className="tw-container tw-mt-[70px] ">
             <div className="tw-min-h-[500px] tw-bg-secondary tw-rounded-[25px] tw-py-[50px]">
@@ -80,7 +73,7 @@ const CoursesSliderWithCategory: FC<CoursesSliderWithCategoryProps> = ({
                 {section_title && (
                     <AnimatedSectionTitle
                         {...section_title}
-                        titleSize={"small"}
+                        titleSize="small"
                         className="tw-mb-7.5 md:tw-mb-15"
                         initial="offscreen"
                         whileInView="onscreen"
@@ -90,35 +83,35 @@ const CoursesSliderWithCategory: FC<CoursesSliderWithCategoryProps> = ({
                     />
                 )}
                 {/* <div className="tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[103px]"> */}
-                    <AnimatedSwiper
-                        options={options}
-                        className="bookingsAreaSlider tw-h-full tw-static tw-px-[71px]"
-                    >
-                        {courses.map((course) => {
-                            return (
-                                <SwiperSlide
-                                    key={course.id}
-                                    className="books-slides tw-max-w-full tw-h-full !tw-static"
-                                >
-                                    <AnimatedCourseCard
-                                        key={course.path}
-                                        title={course.title}
-                                        path={course.path}
-                                        published_at={course.published_at}
-                                        thumbnail={course.thumbnail}
-                                        price={course.price}
-                                        currency={course.currency}
-                                        initial="offscreen"
-                                        whileInView="onscreen"
-                                        viewport={{ once: true, amount: 0.4 }}
-                                        variants={scrollUpVariants}
-                                        instructorName={course.instructorName}
-                                        duration={course.duration}
-                                    />
-                                </SwiperSlide>
-                            );
-                        })}
-                    </AnimatedSwiper>
+                <AnimatedSwiper
+                    options={options}
+                    className="bookingsAreaSlider tw-h-full tw-static tw-px-[71px]"
+                >
+                    {courses.map((course) => {
+                        return (
+                            <SwiperSlide
+                                key={course.id}
+                                className="books-slides tw-max-w-full tw-h-full !tw-static"
+                            >
+                                <AnimatedCourseCard
+                                    key={course.path}
+                                    title={course.title}
+                                    path={course.path}
+                                    published_at={course.published_at}
+                                    thumbnail={course.thumbnail}
+                                    price={course.price}
+                                    currency={course.currency}
+                                    initial="offscreen"
+                                    whileInView="onscreen"
+                                    viewport={{ once: true, amount: 0.4 }}
+                                    variants={scrollUpVariants}
+                                    instructorName={course.instructorName}
+                                    duration={course.duration}
+                                />
+                            </SwiperSlide>
+                        );
+                    })}
+                </AnimatedSwiper>
                 {/* </div> */}
             </div>
         </section>

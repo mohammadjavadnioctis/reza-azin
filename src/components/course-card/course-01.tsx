@@ -31,7 +31,7 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
             title,
             path,
             price,
-            currency,
+            // currency,
             instructorName,
             duration,
             // published_at,
@@ -39,7 +39,6 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
         },
         ref
     ) => {
-        console.log('this is the thumbnail: ', thumbnail)
         // const priceConv = price === 0 ? "free" : `${currency}${price}`;
         return (
             <div className="tw-px-[18px]">
@@ -93,7 +92,6 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
                         </div>
                     </div>
                 </div>
-
             </div>
         );
     }
