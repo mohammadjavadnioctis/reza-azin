@@ -163,6 +163,7 @@ export interface ICourse {
     total_students: number;
     language: string;
     instructor: IDType;
+    instructorName: string;
     duration: string;
     membership?: string[];
     isPopular?: boolean;

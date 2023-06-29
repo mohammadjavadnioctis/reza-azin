@@ -25,6 +25,7 @@ const CourseArea = ({
     titleSize,
     innerContainerClassNames = "",
 }: TProps) => {
+    console.log('this are the courses from the CourseAre: ', courses)
     return (
         <Section className="course-area" space={space} bg={bg}>
             <div className={`tw-container ${innerContainerClassNames}`}>
@@ -39,7 +40,7 @@ const CourseArea = ({
                         variants={scrollUpVariants}
                     />
                 )}
-                <div className="tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[30px]">
+                <div className="tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[103px]">
                     {courses?.map((course) => (
                         <AnimatedCourseCard
                             key={course.path}
@@ -53,6 +54,8 @@ const CourseArea = ({
                             whileInView="onscreen"
                             viewport={{ once: true, amount: 0.4 }}
                             variants={scrollUpVariants}
+                            instructorName={course.instructorName}
+                            duration={course.duration}
                         />
                     ))}
                 </div>
