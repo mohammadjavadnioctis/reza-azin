@@ -3,6 +3,10 @@ import clsx from "clsx";
 import dayjs from "dayjs";
 import Anchor from "@ui/anchor";
 import { ICourse } from "@utils/types";
+import NineOclock from '@assets/svgs/nine-oclock.svg'
+import ManSpeaking from '@assets/svgs/man-speaking.svg'
+import BitcoinIcon from '@assets/svgs/bitcoin-sign.svg'
+
 
 interface TProps
     extends Pick<
@@ -14,6 +18,8 @@ interface TProps
         | "price"
         | "published_at"
         | "excerpt"
+        | "instructorName"
+        | "duration"
     > {
     className?: string;
 }
@@ -27,8 +33,10 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
             path,
             price,
             currency,
-            published_at,
-            excerpt,
+            instructorName,
+            duration
+            // published_at,
+            // excerpt,
         },
         ref
     ) => {
@@ -36,7 +44,7 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
         return (
             <div
                 className={clsx(
-                    "tw-overflow-hidden tw-transition-all tw-bg-gray-100 tw-rounded tw-h-full group hover:tw-bg-white hover:tw-shadow-4xl hover:tw-shadow-black/[0.12]",
+                    "tw-transition-all tw-bg-gray-100 tw-rounded tw-h-full group hover:tw-bg-white hover:tw-shadow-4xl hover:tw-shadow-black/[0.12]",
                     className
                 )}
                 ref={ref}
@@ -57,17 +65,29 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
                         {title}
                     </Anchor>
                 </figure>
-                <div className="tw-relative tw-px-7.5 tw-pt-7.5 tw-pb-10">
-                    <span className="tw-capitalize tw-font-extrabold tw-bg-primary tw-text-white tw-leading-none tw-rounded-full tw-flex tw-justify-center tw-items-center tw-absolute tw-right-5 -tw-translate-y-1/2 tw-top-0 tw-w-[60px] tw-h-[60px] tw-text-lg md:tw-w-[70px] md:tw-h-[70px] md:tw-text-2xl">
-                        {priceConv}
-                    </span>
-                    <span className="tw-font-medium tw-block tw-uppercase tw-mb-1 tw-tracking-[2px] tw-text-secondary-light">
-                        {dayjs(published_at).format("MMM DD, YYYY")}
-                    </span>
-                    <h3 className="tw-leading-normal tw-text-secondary tw-m-0">
+                <div className="tw-relative tw-px-5 tw-pt-12 tw-pb-4" style={{direction: 'rtl'}}>
+                    <h3 className="tw-capitalize tw-font-bold tw-text-violet-dark tw-bg-[#E4E4E4] tw-bg-opacity-90  tw-backdrop-blur-[10px] tw-leading-none tw-rounded-[15px] tw-flex tw-justify-center tw-items-center tw-absolute -tw-right-4 -tw-translate-y-1/2 tw-top-0 tw-w-[calc(100%_+_34px)] tw-h-[60px] md:tw-h-[70px] tw-text-lg md:tw-text-base tw-py-6 tw-px-5">
                         <Anchor path={path}>{title}</Anchor>
                     </h3>
-                    {excerpt && <p className="tw-mt-2.5">{excerpt}</p>}
+                    {/* <span className="tw-font-medium tw-block tw-uppercase tw-mb-1 tw-tracking-[2px] tw-text-secondary-light">
+                        {dayjs(published_at).format("MMM DD, YYYY")}
+                    </span> */}
+                    {/* {excerpt && <p className="tw-mt-2.5">{excerpt}</p>} */}
+                    <div className="tw-w-full tw-flex tw-items-center tw-justify-between">
+                        <div className="tw-flex tw-items-center tw-flex-nowrap">
+                            <NineOclock className="tw-ml-2"/>
+                            <span> {duration}  </span>
+                        </div>
+                        <div className="tw-flex tw-items-center">
+                            <ManSpeaking className="tw-ml-2"/>
+                            <span> {instructorName} </span>
+                        </div>
+                        <div className="tw-flex tw-items-center">
+                            <BitcoinIcon className="tw-ml-2"/>
+                            <span> {price} هزار تومان </span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         );
