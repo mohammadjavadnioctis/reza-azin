@@ -39,6 +39,8 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
         },
         ref
     ) => {
+        // TODO: add the proper path 
+        path = '#'
         // const priceConv = price === 0 ? "free" : `${currency}${price}`;
         return (
             <div className="tw-px-[18px]">

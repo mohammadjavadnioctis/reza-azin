@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --violet-light: #A76BCF
+}
+
 @layer base {
     body {
         @apply tw-font-body tw-text-body tw-leading-body tw-text-base tw-font-normal tw-overflow-x-hidden;
@@ -111,7 +115,7 @@
     100% {
       transform: rotate(360deg);
     }
-  }
+  }gi
   
   .rotate-animation {
     animation: rotate 10s linear infinite;
@@ -133,7 +137,8 @@
   }
 
   .bookingsAreaSlider .swiper-pagination .swiper-pagination-bullet:before, 
-  .in-person-courses-area .swiper-pagination .swiper-pagination-bullet:before
+  .in-person-courses-area .swiper-pagination .swiper-pagination-bullet:before,
+  .courses-slider .swiper-pagination .swiper-pagination-bullet:before
   {
     width: 5px;
     height: 5px;
@@ -145,3 +150,17 @@
   }
 
   /* styling the pagination of the BooksArea end*/
+  
+  /* styling the pagination of the courses-slider start*/
+
+  .courses-slider .swiper-pagination .swiper-pagination-bullet:before {
+    background: var(--violet-light)
+  }
+
+  .courses-slider .swiper-pagination .swiper-pagination-bullet-active:before{
+    background: white;
+  }
+
+  /* styling the pagination of the courses-slider end*/
+
+

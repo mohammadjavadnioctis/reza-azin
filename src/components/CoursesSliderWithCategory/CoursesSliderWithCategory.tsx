@@ -85,13 +85,13 @@ const CoursesSliderWithCategory: FC<CoursesSliderWithCategoryProps> = ({
                 {/* <div className="tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[103px]"> */}
                 <AnimatedSwiper
                     options={options}
-                    className="bookingsAreaSlider tw-h-full tw-static tw-px-[71px]"
+                    className="courses-slider tw-h-full tw-static tw-px-[71px]"
                 >
                     {courses.map((course) => {
                         return (
                             <SwiperSlide
                                 key={course.id}
-                                className="books-slides tw-max-w-full tw-h-full !tw-static"
+                                className="courses-slides tw-max-w-full tw-h-full !tw-static"
                             >
                                 <AnimatedCourseCard
                                     key={course.path}
