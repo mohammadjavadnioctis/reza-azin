@@ -1,12 +1,11 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import Anchor from "@ui/anchor";
 import { ICourse } from "@utils/types";
-import NineOclock from '@assets/svgs/nine-oclock.svg'
-import ManSpeaking from '@assets/svgs/man-speaking.svg'
-import BitcoinIcon from '@assets/svgs/bitcoin-sign.svg'
-
+import NineOclock from "@assets/svgs/nine-oclock.svg";
+import ManSpeaking from "@assets/svgs/man-speaking.svg";
+import BitcoinIcon from "@assets/svgs/bitcoin-sign.svg";
 
 interface TProps
     extends Pick<
@@ -34,13 +33,13 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
             price,
             currency,
             instructorName,
-            duration
+            duration,
             // published_at,
             // excerpt,
         },
         ref
     ) => {
-        const priceConv = price === 0 ? "free" : `${currency}${price}`;
+        // const priceConv = price === 0 ? "free" : `${currency}${price}`;
         return (
             <div
                 className={clsx(
@@ -65,7 +64,10 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
                         {title}
                     </Anchor>
                 </figure>
-                <div className="tw-relative tw-px-5 tw-pt-12 tw-pb-4" style={{direction: 'rtl'}}>
+                <div
+                    className="tw-relative tw-px-5 tw-pt-12 tw-pb-4"
+                    style={{ direction: "rtl" }}
+                >
                     <h3 className="tw-capitalize tw-font-bold tw-text-violet-dark tw-bg-[#E4E4E4] tw-bg-opacity-90  tw-backdrop-blur-[10px] tw-leading-none tw-rounded-[15px] tw-flex tw-justify-center tw-items-center tw-absolute -tw-right-4 -tw-translate-y-1/2 tw-top-0 tw-w-[calc(100%_+_34px)] tw-h-[60px] md:tw-h-[70px] tw-text-lg md:tw-text-base tw-py-6 tw-px-5">
                         <Anchor path={path}>{title}</Anchor>
                     </h3>
@@ -75,18 +77,17 @@ const CourseCard = forwardRef<HTMLDivElement, TProps>(
                     {/* {excerpt && <p className="tw-mt-2.5">{excerpt}</p>} */}
                     <div className="tw-w-full tw-flex tw-items-center tw-justify-between">
                         <div className="tw-flex tw-items-center tw-flex-nowrap">
-                            <NineOclock className="tw-ml-2"/>
-                            <span> {duration}  </span>
+                            <NineOclock className="tw-ml-2" />
+                            <span> {duration} </span>
                         </div>
                         <div className="tw-flex tw-items-center">
-                            <ManSpeaking className="tw-ml-2"/>
+                            <ManSpeaking className="tw-ml-2" />
                             <span> {instructorName} </span>
                         </div>
                         <div className="tw-flex tw-items-center">
-                            <BitcoinIcon className="tw-ml-2"/>
+                            <BitcoinIcon className="tw-ml-2" />
                             <span> {price} هزار تومان </span>
                         </div>
-
                     </div>
                 </div>
             </div>

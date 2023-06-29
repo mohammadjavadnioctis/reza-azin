@@ -25,7 +25,6 @@ const CourseArea = ({
     titleSize,
     innerContainerClassNames = "",
 }: TProps) => {
-    console.log('this are the courses from the CourseAre: ', courses)
     return (
         <Section className="course-area" space={space} bg={bg}>
             <div className={`tw-container ${innerContainerClassNames}`}>
