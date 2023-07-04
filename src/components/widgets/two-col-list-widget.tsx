@@ -18,22 +18,22 @@ const TwoColumnListWidget = ({ className, mode }: TProps) => {
                 )}
             >
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/start-here">Start here</Anchor>
+                    <Anchor path="/#">Start here</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/success-story">Success story</Anchor>
+                    <Anchor path="/#">Success story</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/blogs/blog-grid">Blog</Anchor>
+                    <Anchor path="/#">Blog</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/courses/grid-01">Courses</Anchor>
+                    <Anchor path="/#">Courses</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/about-us-01">About us</Anchor>
+                    <Anchor path="/#">About us</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/contact-us">Contact us</Anchor>
+                    <Anchor path="/#">Contact us</Anchor>
                 </li>
             </ul>
         </div>

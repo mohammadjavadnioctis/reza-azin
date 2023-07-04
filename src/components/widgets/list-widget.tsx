@@ -18,16 +18,16 @@ const ListWidget = ({ className, mode }: TProps) => {
                 )}
             >
                 <li className="tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/membership-levels">Membership</Anchor>
+                    <Anchor path="/#">Membership</Anchor>
                 </li>
                 <li className="tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/purchase-guide">Purchase guide</Anchor>
+                    <Anchor path="/#">Purchase guide</Anchor>
                 </li>
                 <li className="tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/privacy-policy">Privacy policy</Anchor>
+                    <Anchor path="/#">Privacy policy</Anchor>
                 </li>
                 <li className="tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/terms-of-service">Terms of service</Anchor>
+                    <Anchor path="/#">Terms of service</Anchor>
                 </li>
             </ul>
         </div>
