@@ -29,7 +29,7 @@ const Footer01 = ({ mode }: TProps) => {
                     />
                     <ListWidget
                         mode={mode}
-                        className="tw-col-span-12 md:tw-col-span-5 lg:tw-col-span-3 tw-mb-7.5"
+                        className="tw-col-span-12 md:tw-col-span-5 lg:tw-col-span-3 tw-mb-7.5 "
                     />
                 </div>
                 <p className="copyright tw-text-center tw-text-md tw-text-gray-400 tw-mt-5">
